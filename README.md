@@ -6,18 +6,6 @@
 - Create your own service or factory in an Angular app
 - Manage data across controllers with a service.
 
-## Adios, $rootScope...
-Q: How do we share data from one controller to another in Angular?
-(The first thought might be to use $rootScope and pass it to each of our controllers..but there is a better way!)
-
-A: We don't. If two controllers need common data it should live in a service that we then inject into both controllers.
-
-Here is a list of some of Angular's Built-in services
-- $http
-- $scope
-- $rootScope
-- $location
-
 ## What is a Service/Factory/Provider?
 - Objects that are wired together using dependency injection (DI).
 - You can use services to organize and share code across your app.
@@ -30,8 +18,11 @@ Here is a list of some of Angular's Built-in services
 - Actual definition, "A pattern which ensures a class only has one instance, and provides a global point of access to it.
 - If the object's constructor is called again, it just returns the same instance created before.
 
-#### Exercise 1: Singletons
-Use the singleton pattern in plain javascript to create an object that stores a list of instructors. Add Mike, Wes, Robby, and Ben to the list. Get a second instance of the singleton and verify that the four instructors are still in the list.
+## To $rootScope...or not to $rootScope?
+Q: How do we share data from one controller to another in Angular?
+(The first thought might be to use $rootScope and pass it to each of our controllers..but there is a better way!)
+
+A: We don't. If two controllers need common data it should live in a service that we then inject into both controllers.
 
 
 #### Factory Syntax
@@ -83,6 +74,11 @@ angular
     // I now have access to the menuService!
   })
 ```
+
+#### Exercise 1: Singletons
+Use the singleton pattern in plain javascript to create an object that stores a list of instructors. Add Mike, Wes, Robby, and Ben to the list. Get a second instance of the singleton and verify that the four instructors are still in the list.
+
+
 
 #### So which one??
 
