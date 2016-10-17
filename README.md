@@ -33,9 +33,9 @@ Here is a list of some of Angular's Built-in services
 ##### Exercise 1: Singletons
 Use the singleton pattern in plain javascript to create an object that stores a list of instructors. Add Mike, Wes, Robby, and Ben to the list. Get a second instance of the singleton and verify that the four instructors are still in the list.
 
+
 #### Factory Syntax
-
-
+```js
 angular
   .module("learnServices", [])
   .factory('menuFactory', function(){
@@ -58,6 +58,7 @@ angular
   }).controller('dinnerwareController', function(menuFactory){
     // I now have access to all the methods/properties returned from the personFactory!
   }
+```
 
 #### Service Syntax
 
@@ -113,7 +114,7 @@ Build an Angular app with at least two controllers, two templates, and a service
 Here is a sample GET request to the cryptonator api.
 `https://api.cryptonator.com/api/ticker/btc-usd`
 This will return the following object:
-```json
+```
 {
   "ticker": {
     "base":"ETH",
